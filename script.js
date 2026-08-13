@@ -12,7 +12,7 @@ function reservar(linha, coluna, cadeira){
     if(sala[linha][coluna]==0){
         //muda a matriz para ocupado
         sala[linha][coluna]=1
-        //mudar a cor da cadeira para vermelhor
+        //mudar a cor da cadeira para vermelho
         cadeira.style.backgroundColor="red"
 
         document.getElementById("mensagem").innerText=

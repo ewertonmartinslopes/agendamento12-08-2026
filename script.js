@@ -5,24 +5,27 @@ let sala = [
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0]
 ];
-
-
 //0 = livre
 //1 = ocupado
-function reservar(linha, coluna, caldeira){
-    //verifica se a caldeira esta livre
+function reservar(linha, coluna, cadeira){
+        // verifica se a cadeira livre
     if(sala[linha][coluna]==0){
-        //mudar a matriz para ocupado
-        sala[linha][coluna]==1
-        // muda a cor da cadeira para vermelho
-        caldeira.style.backgroundColor="red"
+        //muda a matriz para ocupado
+        sala[linha][coluna]=1
+        //mudar a cor da cadeira para vermelhor
+        cadeira.style.backgroundColor="red"
 
-    document.getElementById("mensagem").innerText=
-    "Caldeira reservada com sucesso"
+        document.getElementById("mensagem").innerText=
+        "Cadeira agendada"
+    }else{
 
-    }
-    else{
-    document.getElementById("mensagem").innerText=
-    "Caldeira Indisponivel"
+        sala[linha][coluna]=0
+
+        cadeira.style.backgroundColor="rgba(3, 19, 112, 0.932)"
+
+        document.getElementById("mensagem").innerText=
+        //mudar a cor da cadeira para vermelhor
+        "cadeira liberada";
+       
     }
 }
